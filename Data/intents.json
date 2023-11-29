@@ -1,0 +1,353 @@
+{
+    "intents": [
+        {
+            "tag": "greetings",
+            "patterns": [
+                "Hi", "Hello", "Hey"
+            ],
+            "responses": [
+                "Hi there, how can I help you?"
+            ]
+        },
+        {
+            "tag": "AdmissionReqs",
+            "patterns": [
+                "What are the admission requirements?",
+                "What documents do I need to submit with my application?", 
+                "What are the admission requirements for undergraduate programs?"
+            ],
+            "responses": [
+                "Hi! Here are the requirements for admission: original copy of Grade 12 Report Card (form 138);",
+                "   Original copy of Certificate of Good Moral Character; photocopy of senior high school diploma;",
+                "   Authenticated copy of PSA birth certificate; and ",
+                "   Four (4) copies of a 2x2 ID picture (white background with nametag). ",
+                "The requirements stated above will be submitted to the ISUC Registrar's Office."
+            ]
+        },
+        {
+            "tag": "TuitionFee",
+            "patterns": [
+                "Is there an application fee, and how can I pay it?",
+                "What is the tuition fee, and what are the payment options?"
+            ],
+            "responses": [
+                "Hi! Isabela State University-Cabagan Campus is a free-tuition university. This is by RA 10913 known as the 'Universal Access to Quality Tertiary Education Act of 2017'. In compliance with Section 4 of the Act, all Filipino students who are either currently enrolled at the time of its effectivity, or shall enrolled at any time thereafter, any avail of the exemption from paying tuition and other school fees units enrolled, in courses leading to a bachelor's degree in any SUC and LUC."
+            ]
+        },
+        {
+            "tag": "Scholarship",
+            "patterns": [
+                "Are there any scholarships available, and how can I apply for them?"
+            ],
+            "responses": [
+                "Hi! There is a merit scholarship for the ISU-Cabagan campus, where university scholars should have at least a grade of 1.00 to 1.50 (92% to100%) and shall receive a 3,000 peso cash incentive. College Scholars should have at least 1.51 to 1.75% (89 to 91%) and shall receive a 2,000 peso cash incentive. \n Other scholarship programs will be posted on the ISUC official page."
+            ]
+        },
+        {
+            "tag": "WaitingListinAdmission",
+            "patterns": [
+                "Is there a waiting list for admission, and how does it work?"
+            ],
+            "responses": [
+                "Yes, there is! Just visit the official page of the ISU-Cabagan campus to keep in touch. 'https://www.facebook.com/ISUCabaganAdmissionandGuidanceServices'"
+            ]
+        },
+        {
+            "tag": "OnlineEnrollment",
+            "patterns": [
+                "Is online registration available, and how can I access it?"
+            ],
+            "responses": [
+                "Hi! Yes, online registration is available. Here is the link 'https://app.isucabagan.edu.ph'. ",
+                "   ",
+                "(Note: Online enrollment is NOT applicable for shifters, irregular and returning students. Go to campus for enrollment and submit your Pre-registration Form signed by your registration adviser at the Registrar's Office.)"
+            ]
+        },
+        {
+            "tag": "EnrollmentInfo",
+            "patterns": [
+                "How to enroll?", 
+                "Can you guide me through the enrollment process?",
+                "How to enroll in BSIT?",
+                "How to enroll in BSCS?",
+                "How to enroll in BSCPE?",
+                "How to enroll in BSECE?"
+            ],
+            "responses": [
+                "hi let me know if you are an incoming freshman, transferee or upperclassman."
+            ]
+        },
+        {
+            "tag": "EnrollmentDate",
+            "patterns": [
+                "When is enrollment date?", "When are the enrollment dates?"
+            ],
+            "responses": [
+                "Hi! Enrollment dates for the first semester are August 14 to September 8. For the second semester, this will be February 12 to 16, 2024. ",
+                "Visit the official CCSICT Facebook page for detailed schedules of enrollment per year."
+            ]
+        },
+        {
+            "tag": "FreshmanEnroll",
+            "patterns": [
+                "I'm an incoming freshman"
+            ],
+            "responses": [
+                "Hi! These are the requirements for admission that will be submitted to the ISUC Registrar's Office: ",
+                "   Original copy of Grade 12 Report Card (form 138); ",
+                "   Original copy of Certificate of Good Moral Character; ",
+                "   Photocopy of senior high school diploma; \nAuthenticated copy of PSA birth certificate; and ",
+                "   Four (4) copies of a 2x2 ID picture (white background with nametag). "
+            ]
+        },
+        {
+            "tag": "TransfereeEnroll",
+            "patterns": [
+                "I'm a transferee"
+            ],
+            "responses": [
+                "Here are the requirements that you must submit to the ISUC Registrar's Office: ",
+                "   Original Copy of Certification of Grades showing all the subjects taken from the school last attended; ",
+                "   Original Copy of Honorable Dismissal; ",
+                "   Original Copy of Certificate of Good Moral Character; ",
+                "   Four (4) copies of 2x2 ID picture (with white background and name tag); and ",
+                "   Authenticated Copy of PSA Birth Certificate. ",
+                "   ",
+                "   Also, please save these important dates for enrollment: the first semester is August 14 to September 8, and the second semester is February 12 to 16, 2024. Visit the official CCSICT Facebook page for detailed schedules."
+            ]
+        },
+        {
+            "tag": "UpperclassmanEnroll",
+            "patterns": [
+                "I'm an upperclassman", "Upper class man", "I'm an upper classman", "upperclassmen"
+            ],
+            "responses": [
+                "Hi! If you are a regular student, click the SARIAS link to enroll >> 'https://app.isucabagan.edu.ph/sarias/index.php'. ",
+                "However, if you are a shifter, irregular, or returning student, go to the campus for enrollment. Submit your Pre-registration Form signed by your registration adviser at the Registrar's Office."
+            ]
+        },
+        {
+            "tag": "ContactAdmin",
+            "patterns": [
+                "How can I contact the support team or administrator"
+            ],
+            "responses": [
+                "You may refer on the Contact Us page of the website to continue with the process"
+            ]
+        },
+        {
+            "tag": "CoursesOffered",
+            "patterns": [
+                "what are the courses offered in CCSICT?", 
+                "What are the programs offered?", 
+                "What are the programs present here"
+            ],
+            "responses": [
+                "Hi! CCSICT offers Bachelor of Science in Computer Science (BSCS), Bachelor of Science in Information Technology (BSIT), Bachelor of Science in Computer Engineering (BSCpE), and Bachelor of Science in Electronics and Communications Engineering (BS-ECE)"
+            ]
+        },
+        {
+            "tag": "SariasLink",
+            "patterns": [
+                "What is the link for SARIAS?"
+            ],
+            "responses": [
+                "Hi! Here is the link for SARIAS 'https://app.isucabagan.edu.ph/sarias/index.php'"
+            ]
+        },
+        {
+            "tag": "SediLink",
+            "patterns": [
+                "What is the link for SeDi?"
+            ],
+            "responses": [
+                "Hi! Here is the link for SeDi 'https://sedi.isucabagan.edu.ph/sedi/login/index.php'"
+            ]
+        },
+        {
+            "tag": "WhereAcademicCalendar",
+            "patterns": [
+                "Where can I find the academic calendar?"
+            ],
+            "responses": [
+                "Hi! You can see University Academic Calendar at the Bulletin Board of CCSICT."
+            ]
+        },
+        {
+            "tag": "ImportantDates",
+            "patterns": [
+                "What are the important dates for the upcoming semester, such as exam periods?"
+            ],
+            "responses": [
+                "Hi! Here are the dates for the exam period for the 2023 to 2024 semester: ",
+                "   Preliminary examination",
+                "       Undergraduate: October 18 to 20; ",
+                "       Graduate: October 21 to 22 ",
+                "   Midterm Examination:",
+                "       Undergraduate: December 5-7;",
+                "       Graduate: December 9-10 ",
+                "   Final Examination ",
+                "       Undergraduate: January 18 to 19, 2024."
+            ]
+        },
+        {
+            "tag": "ClubRegistration",
+            "patterns": [
+                "How can I get involved in student clubs and organizations?"
+            ],
+            "responses": [
+                "Hi! You can register at your desired club during the orientation day, or you can approach your classroom president to assist you with your registration."
+            ]
+        },
+        {
+            "tag": "Clubs",
+            "patterns": [
+                "What are the student clubs present in CCSICT?"
+            ],
+            "responses": [
+                "Hi! CCSICT offered clubs such as the Student Publication Club, Programming Club, Music Club, Dance Club, and Sports Club."
+            ]
+        },
+        {
+            "tag": "GraduationDate",
+            "patterns": [
+                "Is there a graduation ceremony, and when does it take place?"
+            ],
+            "responses": [
+                "Hi! Graduation and Commencement exercises will take place anywhere between July 25 and August 8, 2024."
+            ]
+        },
+        {
+            "tag": "SeminarsOffered",
+            "patterns": [
+                "Are there workshops or seminars on campus to enhance skills and knowledge?"
+            ],
+            "responses": [
+                "Yes, there are! Faculties often announce to the students if there are upcoming workshops and seminars. Just stay tuned."
+            ]
+        },
+        {
+            "tag": "PrelimDate",
+            "patterns": [
+                "When is the Preliminary Exam?"
+            ],
+            "responses": [
+                "The preliminary examination is usually administered every sixth week of the semester. For the first semester, that is around October, while for the second semester, that is around March."
+            ]
+        },
+        {
+            "tag": "MidtermDate",
+            "patterns": [
+                "When is the Midterm Exam?"
+            ],
+            "responses": [
+                "The midterm examination is usually administered every 12th week of the semester. For the first semester, that is around December, while for the second semester, that is around May."
+            ]
+        },
+        {
+            "tag": "FinalsDate",
+            "patterns": [
+                "When is the Final Exam?"
+            ],
+            "responses": [
+                "The final exam is usually administered every 18th week of the semester. For the first semester, that is around January, while for the second semester, that is around June."
+            ]
+        },
+        {
+            "tag": "AdmissionDate",
+            "patterns": [
+                "When is the admission for new entrants?"
+            ],
+            "responses": [
+                "Hi! Admission for new entrants for the first semester takes place from March 1 to July 28. In the second semester, admission will be held from December 11 to January 12, 2024."
+            ]
+        },
+        {
+            "tag": "StartofClassesDate",
+            "patterns": [
+                "When is the start of classes?"
+            ],
+            "responses": [
+                "Hi! The start of classes for the second semester is February 19, 2024."
+            ]
+        },
+        {
+            "tag": "AddingSubjectDate",
+            "patterns": [
+                "When is the adding or changing of subjects?"
+            ],
+            "responses": [
+                "Hi! The adding and changing of subjects for the first semester is scheduled for September 11 to 13, 2023. In the second semester, it is scheduled for February 21 to 23, 2024. For midyear, it is scheduled for July 22, 2024."
+            ]
+        },
+        {
+            "tag": "DroppingofSubjectsDate",
+            "patterns": [
+                "When is the Dropping of Subjects?"
+            ],
+            "responses": [
+                "Hi! The dropping of subjects for the first semester is scheduled for October 13, 2023. In the second semester, it is scheduled for March 25, 2024. For midyear, it is scheduled for July 29, 2024."
+            ]
+        },
+        {
+            "tag": "LastDayofFilingGraduationDate",
+            "patterns": [
+                "When is the last day of filing an Application for Graduation?"
+            ],
+            "responses": [
+                "Hi! The last day to file an application for graduation for the first semester is October 13, 2023. The second semester is on March 18, 2024. For midyear, July 29, 2024"
+            ]
+        },
+        {
+            "tag": "StudentWeekDate",
+            "patterns": [
+                "When is the student week?"
+            ],
+            "responses": [
+                "Hi! Student week will occur on the 3rd week of April 2024. It will be held for 3 days."
+            ]
+        },
+        {
+            "tag": "ChristmasBreakDate",
+            "patterns": [
+                "When is the Christmas break or vacation?"
+            ],
+            "responses": [
+                "Hi! Christmas Vacation is scheduled from December 19, 2023, to January 1, 2024."
+            ]
+        },
+        {
+            "tag": "LastDayofBoundManuscript",
+            "patterns": [
+                "When is the last day for submission of Bound Manuscript?"
+            ],
+            "responses": [
+                "Hi! The last day for submitting bound manuscripts for the first semester is January 30, 2024. In the second semester, it will be June 22, 2024. then, for midyear, it will be August 23, 2024."
+            ]
+        },
+        {
+            "tag": "Thanks",
+            "patterns": [
+                "thanks", "okay"
+            ],
+            "responses": [
+                "You're welcome"
+            ]
+        },
+        {
+            "tag": "Goodbye",
+            "patterns": [
+                "goodbye", "exit"
+            ],
+            "responses": [
+                "Goodbye. Have a great day!"
+            ]
+        }
+    ],
+        "offensive_words": [
+          "fuck", "fucking,",
+          "fck", "bitch", "bastard",
+          "shit",
+          "shitty"
+        ]
+}

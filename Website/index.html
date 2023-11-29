@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatbot Interaction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            background-color: #00A86B; /* Jade color for the header background */
+            color: #fff; /* Text color for the header */
+        }
+
+        .chathead img {
+            width: 50px; /* Adjust the width as needed */
+            height: 50px; /* Adjust the height as needed */
+            object-fit: cover;
+            border-radius: 50%; /* Make the image circular */
+            margin-right: 10px; /* Add some space between the image and text */
+        }
+
+        .status {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        #chatbox {
+            height: 300px;
+            overflow-y: scroll;
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        .user-message {
+            text-align: right;
+            color: green;
+        }
+
+        .banned-message {
+            color: red;
+        }
+        
+        /* Added styles for smaller "Active Now" text */
+        .active-now {
+            font-size: 12px;
+        }
+
+        /* Added styles for bold chatbot and user names */
+        .bold-name {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="chathead">
+            <img src="C:\Users\limis\Documents\chatbot project\website pics\received_1512218956286166.jpeg" alt="Chatbot Image">
+        </div>
+        <div class="status">
+            <div class="bold-name">Bob</div>
+            <div><span class="active-now">Active Now</span></div>
+         </div>
+    </div>
+
+    <div id="chatbox"></div>
+    <div>
+        <label for="userInput">Type your message:</label>
+        <input type="text" id="userInput">
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+    <script>
+        let offensiveWordCount = 0;
+        let isBanned = false;
+
+        function sendMessage() {
+            if (isBanned) {
+                displayBannedMessage();
+                return;
+            }
+
+            const userInput = document.getElementById('userInput').value;
+            const apiUrl = 'http://127.0.0.1:5000/chatbot';
+
+            fetch(apiUrl, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ user_input: userInput }),
+            })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.json();
+            })
+            .then(data => {
+                displayResponse(data.response, userInput);
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
+        }
+
+        function displayResponse(response, userInput) {
+            const chatbox = document.getElementById('chatbox');
+
+            // Check for offensive words
+            if (response.includes("Warning: The use of offensive language is not allowed")) {
+                offensiveWordCount++;
+
+                if (offensiveWordCount >= 3) {
+                    // Display banned message
+                    displayBannedMessage();
+                    return;
+                }
+            }
+
+            // Display user's input
+            const userInputElement = document.createElement('p');
+            userInputElement.classList.add('user-message');
+            userInputElement.innerHTML = '<strong>You:</strong> ' + userInput;  // Use innerHTML to interpret HTML
+            chatbox.appendChild(userInputElement);
+
+            // Display chatbot's response
+            const responseElement = document.createElement('p');
+            responseElement.innerHTML = '<strong>Bob:</strong> ' + response;  // Use innerHTML to interpret HTML
+            chatbox.appendChild(responseElement);
+
+            // Optionally, you can clear the user input after receiving a response
+            document.getElementById('userInput').value = '';
+
+            // Scroll to the bottom of the chatbox to show the latest message
+            chatbox.scrollTop = chatbox.scrollHeight;
+        }
+
+        function displayBannedMessage() {
+            const chatbox = document.getElementById('chatbox');
+            const bannedMessageElement = document.createElement('p');
+            bannedMessageElement.classList.add('banned-message');
+            bannedMessageElement.textContent = "Sorry, but you have been temporarily banned from using the chatbot for the next hour due to multiple violations of community guidelines.";
+            chatbox.appendChild(bannedMessageElement);
+
+            // Disable the input and send button
+            document.getElementById('userInput').disabled = true;
+            document.querySelector('button').disabled = true;
+
+            // Set isBanned flag to true
+            isBanned = true;
+        }
+    </script>
+</body>
+</html>
